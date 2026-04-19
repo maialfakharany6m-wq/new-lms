@@ -5,20 +5,14 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 
-// 🔐 use env variables (IMPORTANT for Vercel)
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_API_KEY,
-  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
-  projectId: import.meta.env.VITE_PROJECT_ID,
-  storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
-  messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
-  appId: import.meta.env.VITE_APP_ID,
+  apiKey: "AIzaSyDlGMyk7FD9XmVLDMRIM1hnHmd-XMrMXmA",
+  authDomain: "lms-platform-a1973.firebaseapp.com",
+  projectId: "lms-platform-a1973",
+  storageBucket: "lms-platform-a1973.appspot.com",
+  messagingSenderId: "717208730166",
+  appId: "1:717208730166:web:a08c56b94d92a0c5403697"
 };
-
-// 🚨 safety check (prevents blank page)
-if (!firebaseConfig.apiKey) {
-  console.error("Firebase ENV not loaded ❌");
-}
 
 const app = initializeApp(firebaseConfig);
 
